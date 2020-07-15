@@ -1,3 +1,23 @@
 body{
     background-color: rgb(153, 200, 214);
 }
+
+.box1, .box2, .box3, .box4, .boxWater{
+    height: 190px;
+    /* width: ; */
+    padding: 10;
+    align-items: center;
+}
+
+.box1, .box3{
+    background-color: #aaa;
+}
+
+.box2, .box4{
+    background-color: #ccc;
+}
+
+.boxWater {
+    background-color: #3a85ff;
+    color: white;
+}
