@@ -5,6 +5,7 @@ import HeartRate from './components/HeartRate.js';
 /**
  * Variables declarations
  */
+
 const MIN_TEMPERATURE = -20,
   MAX_TEMPERATURE = 40,
   MIN_HEART = 80,
@@ -13,12 +14,25 @@ const MIN_TEMPERATURE = -20,
   MAX_STEPS = 50000;
 
 class App extends React.Component{
+
+  constructor(props) {
+    super(props);
+    state = {
+    water: 0,
+    heart: 120,
+    temperature: -10,
+    steps: 3000
+  };
+}
+
+
+
   render() {
     return(
       <div>{/* élément qui sera affiché */}
         <div className="container-fluid"> 
-          <Person />
-          <HeartRate heart={MIN_HEART}/>
+          <Person person={this.state.heart} />
+          <HeartRate heart={this.state.heart}/>
            {/* <p>Battements de coeur: {MIN_HEART}</p>
           <p>Température : {MIN_TEMPERATURE}</p>
           <p>Nombre de pas : {MIN_STEPS}</p> */}

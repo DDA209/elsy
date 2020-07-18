@@ -2,7 +2,6 @@ import React from 'react';
 import Icon from './core/Icon.js';
 
 const iconStyle ={
-        fontSize: 100,
         color: "red"
     }
 

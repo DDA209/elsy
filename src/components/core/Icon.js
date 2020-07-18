@@ -1,5 +1,9 @@
 import React from 'react';
 
+const iconStyle ={
+    fontSize: 100
+}
+
 class Icon extends React.Component{
     render(){
         return(
