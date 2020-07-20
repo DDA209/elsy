@@ -1,6 +1,7 @@
 import React from 'react';
 import Person from './components/Person.js';
 import HeartRate from './components/HeartRate.js';
+import 'rc-slider/assets/index.css';
 
 /**
  * Variables declarations
@@ -15,24 +16,46 @@ const MIN_TEMPERATURE = -20,
 
 class App extends React.Component{
 
-  constructor(props) {
+  constructor(props) { // Est un méthode toujours mis en 1ere position de la classe
     super(props);
-    state = {
-    water: 0,
-    heart: 120,
-    temperature: -10,
-    steps: 3000
-  };
-}
 
+    this.state = {
+      water: 0,
+      heart: 120,
+      temperature: -10,
+      steps: 3000
+    };
+    
+    ///BIND ici
+    this.onHeartChange =this.onHeartChange.bind(this)
+  }
 
+  //// Méthodes de React - En premier
+
+  //// Event listener (ex : OnClickBloublou) - En deuxième
+
+  //// méthodes (par ordre alphabétique) - En troisième
+  onHeartChange(){
+    let val = 'blublu'
+  }
+
+  /* state = {
+       water: 0,
+       heart: 120,
+       temperature: -10,
+       steps: 3000
+     };*/
 
   render() {
     return(
       <div>{/* élément qui sera affiché */}
         <div className="container-fluid"> 
-          <Person person={this.state.heart} />
-          <HeartRate heart={this.state.heart}/>
+          <Person person={this.state.steps} />
+          <HeartRate heart={val}
+            min = {MIN_HEART}
+            max = {MAX_HEART}
+            onChange = {this.onHeartChange}
+          />
            {/* <p>Battements de coeur: {MIN_HEART}</p>
           <p>Température : {MIN_TEMPERATURE}</p>
           <p>Nombre de pas : {MIN_STEPS}</p> */}

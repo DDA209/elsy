@@ -7,7 +7,7 @@ const iconStyle ={
 class Icon extends React.Component{
     render(){
         return(
-            <span className="material-icons" style={this.props.styleIcon}>
+            <span style={{...this.props.styleIcon, ...iconStyle}} className="material-icons">
                 {this.props.name}
             </span>
         );
