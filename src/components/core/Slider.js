@@ -9,9 +9,9 @@ class Slider extends React.Component {
                 <RCSlider 
                     max={this.props.max}
                     min={this.props.min}
-                    onChange={this.props.onChange}
                     value={this.props.value}
-                /> {/* Attributs max, min onChange et value avec les propriétés du même */}
+                    onChange={this.props.onChange} // Event listner qui attends une fonction callback
+                /> {/* Attributs max, min onChange et value avec les propriétés du même nom */}
             </div>
         );
     }

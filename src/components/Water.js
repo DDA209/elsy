@@ -7,7 +7,7 @@ class HeartRate extends React.Component{
     render(){
         // constantes
         const iconStyle ={
-            color: "red"
+            color: "blue"
         }
 
         // console.log('HeartRate#iconStyle', iconStyle);
@@ -17,14 +17,9 @@ class HeartRate extends React.Component{
                 {/* <span className="material-icons" style={iconStyle}>favorite</span> */}
                 <Icon
                     color={iconStyle}
-                    name="favorite" /> {/* mise en place de la propriété "styleIcone" pour le style du composant Icone */}
-                <p>{this.props.heart} BPM</p>
-                <Slider
-                    max={this.props.max}
-                    min={this.props.min}
-                    value={this.props.heart}
-                    onChange={this.props.onChange}
-                />
+                    name="local_drink"
+                /> {/* mise en place de la propriété "styleIcone" pour le style du composant Icone */}
+                <p>{this.props.heart} litres</p>
             </div>
         );
     }
