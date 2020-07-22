@@ -70,6 +70,26 @@ class App extends React.Component{
   //// méthodes (par ordre alphabétique / sub-render) - En troisième
   
   calculateWater() {
+    const waterSteps = '0'
+    const waterHeart = '0'
+    const waterTemperature = '0'
+    const water = '1.5'
+
+
+    if(this.state.steps > 10000){
+      waterSteps = this.state.steps - 10000 * 0.00002
+      water += waterSteps
+    }
+
+    if(this.state.heart > 120){
+      waterHeart = this.state.waterHeart - 120 * 0.0008
+      water += waterSteps
+    }
+
+    if(this.state.temperature > 20){
+      waterTemperature = this.state.waterTemperature - 20 * 0.002
+      water += waterSteps
+    }
     console.log('App#calculateWater');
   }
 
